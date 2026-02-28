@@ -16,6 +16,9 @@ Agriculture faces critical challenges in resource management. Farmers often stru
   - Difficulty in making data-backed decisions for crop rotation and resource allocation.
 
 ## 3️⃣ Solution Approach
+**AgriOptima** is an intuitive, localized web application designed to help farmers plan, track, and optimize their resources effectively.
+- **How it Addresses the Problem**: It provides a dashboard for real-time tracking of water usage, soil health, and weather forecasts. It digitizes farm management, allowing users to log activities and monitor crop stages.
+- **Tech Stack**:
   - **Frontend**: HTML5, CSS3 (Vanilla, custom Design System), JavaScript (ES6+ for interactive DOM manipulation).
   - **Database & Cloud**: Supabase (PostgreSQL) integration for real-time cloud sync, data persistence, and AI training data collection.
   - **Features**: Multi-language support (English, Hindi, Marathi, Tamil) for accessibility, responsive design for mobile and tablet use on the field, and local storage fallback for offline-capable data persistence.
