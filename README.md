@@ -16,12 +16,10 @@ Agriculture faces critical challenges in resource management. Farmers often stru
   - Difficulty in making data-backed decisions for crop rotation and resource allocation.
 
 ## 3️⃣ Solution Approach
-**AgriOptima** is an intuitive, localized web application designed to help farmers plan, track, and optimize their resources effectively.
-- **How it Addresses the Problem**: It provides a dashboard for real-time tracking of water usage, soil health, and weather forecasts. It digitizes farm management, allowing users to log activities and monitor crop stages.
-- **Tech Stack**:
   - **Frontend**: HTML5, CSS3 (Vanilla, custom Design System), JavaScript (ES6+ for interactive DOM manipulation).
-  - **Features**: Multi-language support (English, Hindi, Marathi, Tamil) for accessibility, responsive design for mobile and tablet use on the field, and local storage for offline-capable data persistence.
-  - **Future Integration Plan**: Backend Node.js/Express with MongoDB, and integration with open-source weather and soil data APIs.
+  - **Database & Cloud**: Supabase (PostgreSQL) integration for real-time cloud sync, data persistence, and AI training data collection.
+  - **Features**: Multi-language support (English, Hindi, Marathi, Tamil) for accessibility, responsive design for mobile and tablet use on the field, and local storage fallback for offline-capable data persistence.
+  - **Integration Strategy**: Hybrid offline-first architecture using local storage with background synchronization to Supabase Cloud.
 
 ## 4️⃣ Architecture Diagram (Draft)
 ```mermaid
@@ -55,9 +53,10 @@ Based on current progress, the following features are planned for subsequent pha
 The current repository contains an early working prototype showcasing:
 - **Responsive Dashboard** (`index.html`): A comprehensive view of farm metrics, active tasks, resource levels, and upcoming weather.
 - **Dynamic AI Analytics Panel**: Generates customized insights and alerts directly based on user inputs scaling mathematically against weather data. 
+- **Cloud Sync Engine**: Integrated Supabase connectivity with a real-time status indicator (Synced/Syncing/Offline) ensuring data durability. 
 - **Multilingual Support**: Fully operational language switching across the entire application to cater to diverse farming communities in India.
 - **Authentication Flow** (`login.html`): Features secure PIN login with robust fallback OTP verification functionality if credentials are correct.
-- **Dynamic UI**: Glassmorphism aesthetic with interactive elements, charts, and data visualization structural layouts (`app.js`, `script.js`, `styles.css`).
+- **Scaled UI Architecture**: Robust modular structure (`config.js`, `database.js`, `app.js`) designed for high performance and visual clarity on multiple devices.
 
 ## Setup Instructions
 To run the AgriOptima Proof of Concept locally:

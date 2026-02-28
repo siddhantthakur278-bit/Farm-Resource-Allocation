@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Supabase Cloud Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="database.js"></script>
 </head>
 
 <body>
@@ -110,9 +114,15 @@
         <main class="main-content">
             <header class="topbar">
                 <h2>Allocation Layout</h2>
-                <div class="status-indicator">
-                    <div class="status-dot"></div>
-                    <span id="system-status">Awaiting Optimization</span>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <div class="status-indicator cloud-sync-btn" id="cloud-sync-status">
+                        <div class="status-dot cloud-dot"></div>
+                        <span id="sync-text">Cloud Sync Enabled</span>
+                    </div>
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span id="system-status">Awaiting Optimization</span>
+                    </div>
                 </div>
             </header>
 
